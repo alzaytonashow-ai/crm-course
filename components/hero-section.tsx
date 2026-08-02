@@ -65,8 +65,14 @@ export default function HeroSection() {
         {/* Instructor Preview Card - Optimized for Mobile */}
         <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-lg sm:rounded-2xl p-4 sm:p-6 border border-slate-700/50 mb-8 sm:mb-10 backdrop-blur">
           <div className="flex gap-3 sm:gap-4 items-start sm:items-center">
-            <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-lg sm:rounded-xl overflow-hidden ring-2 ring-cyan-500/30 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
-              <span className="text-xl sm:text-3xl font-bold text-cyan-400">JI</span>
+            <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 rounded-lg sm:rounded-xl overflow-hidden ring-2 ring-cyan-500/30 bg-slate-800 flex-shrink-0">
+              <Image
+                src="/images/joseph-headshot.jpg"
+                alt="Joseph Ibrahim"
+                width={64}
+                height={64}
+                className="w-full h-full object-cover"
+              />
             </div>
             <div className="flex-1 min-w-0">
               <h3 className="text-base sm:text-lg font-bold text-white">Joseph Ibrahim</h3>
