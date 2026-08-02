@@ -83,18 +83,18 @@ export default function PricingSection() {
             <div className="flex flex-col items-center mb-8">
               <div className="flex items-baseline gap-3 mb-3">
                 <span className="text-sm sm:text-base text-slate-400 line-through">
-                  {paymentInfo?.originalAmount.toLocaleString('ar-EG')} جنيه
+                  {paymentInfo?.originalAmount.toLocaleString('en-US')} جنيه
                 </span>
               </div>
               <div className="flex items-baseline gap-2 mb-4">
                 <span className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                  {paymentInfo?.amount.toLocaleString('ar-EG') || '2,500'}
+                  {paymentInfo?.amount.toLocaleString('en-US') || '2,500'}
                 </span>
                 <span className="text-lg sm:text-xl font-bold text-slate-300">جنيه</span>
               </div>
               <div className="px-3 sm:px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-400/30">
                 <p className="text-xs sm:text-sm font-semibold text-green-300">
-                  توفير {paymentInfo?.discount.toLocaleString('ar-EG') || '1,000'} جنيه ✓
+                  توفير {paymentInfo?.discount.toLocaleString('en-US') || '1,000'} جنيه ✓
                 </p>
               </div>
             </div>
