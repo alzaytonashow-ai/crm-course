@@ -10,21 +10,31 @@ export const metadata: Metadata = {
   description: 'كورس عملي 100% لتطبيق أشهر أنظمة الـ CRM وبناء مسارات المبيعات وأتمتة خدمة العملاء. ورشة عمل حضورية في القاهرة بتدريب شامل من متخصصين.',
   generator: 'v0.app',
   icons: {
-    icon: [
+    icon: '/favicon.ico',
+    apple: '/og-image.png',
+  },
+  openGraph: {
+    title: 'كورس CRM احترافي مع Joseph Ibrahim',
+    description: 'تدريب عملي 100% في إدارة علاقات العملاء والأتمتة والمبيعات',
+    url: 'https://crm-course.example.com',
+    siteName: 'كورس CRM',
+    images: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'كورس CRM احترافي',
+        type: 'image/png',
       },
     ],
-    apple: '/apple-icon.png',
+    type: 'website',
+    locale: 'ar_EG',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'كورس CRM احترافي مع Joseph Ibrahim',
+    description: 'تدريب عملي 100% في إدارة علاقات العملاء',
+    images: ['/og-image.png'],
   },
 }
 
