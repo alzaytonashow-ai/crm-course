@@ -27,11 +27,12 @@ export default function InstructorCard() {
             {/* Instructor Image */}
             <div className="relative w-28 h-28 sm:w-40 sm:h-40 mb-6 rounded-2xl overflow-hidden ring-4 ring-cyan-500/30 bg-slate-800">
               <Image
-                src="/images/joseph-ibrahim.jpg"
+                src="/images/joseph-headshot.jpg"
                 alt="Joseph Ibrahim"
                 width={160}
                 height={160}
                 className="w-full h-full object-cover"
+                priority
               />
             </div>
 

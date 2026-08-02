@@ -23,13 +23,25 @@ export default function Header() {
             />
           </div>
           <div className="hidden lg:flex items-center gap-3 flex-1 min-w-0">
-            <Image
-              src="/images/joseph-badge.png"
-              alt="Joseph Ibrahim - CRM Specialist & AI Solutions"
-              width={280}
-              height={80}
-              className="h-16 w-auto object-contain"
-            />
+            <div className="flex items-center gap-3">
+              {/* Instructor Headshot */}
+              <div className="w-12 h-12 rounded-lg overflow-hidden ring-2 ring-cyan-500/40 flex-shrink-0">
+                <Image
+                  src="/images/joseph-headshot.jpg"
+                  alt="Joseph Ibrahim"
+                  width={48}
+                  height={48}
+                  className="w-full h-full object-cover"
+                  priority
+                />
+              </div>
+              {/* Instructor Info */}
+              <div className="min-w-0 flex-1">
+                <h2 className="text-sm font-bold text-white truncate">Joseph Ibrahim</h2>
+                <p className="text-xs text-cyan-300 font-semibold truncate">CRM Specialist & AI Solutions</p>
+                <p className="text-xs text-slate-400 truncate">معتمد من Vision AI Studio</p>
+              </div>
+            </div>
           </div>
         </div>
 
