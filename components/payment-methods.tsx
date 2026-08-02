@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { Copy, CreditCard, Smartphone } from 'lucide-react'
 import { SiApple, SiVisa, SiMastercard } from 'react-icons/si'
-import { GrWallet } from 'react-icons/gr'
+import { MdAccountBalanceWallet } from 'react-icons/md'
 import { Button } from '@/components/ui/button'
 
 export default function PaymentMethods() {
@@ -105,7 +105,7 @@ export default function PaymentMethods() {
             
             {/* Digital Wallet */}
             <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 text-white shadow-md hover:shadow-lg transition-shadow">
-              <GrWallet className="w-6 h-6 sm:w-7 sm:h-7" />
+              <MdAccountBalanceWallet className="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
           </div>
         </div>
