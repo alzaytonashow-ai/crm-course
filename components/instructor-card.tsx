@@ -24,9 +24,15 @@ export default function InstructorCard() {
 
           {/* Instructor Info */}
           <div className="flex flex-col items-center text-center">
-            {/* Instructor Image Placeholder */}
-            <div className="relative w-24 h-24 sm:w-32 sm:h-32 mb-6 rounded-full overflow-hidden ring-4 ring-cyan-500/30 bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
-              <div className="text-4xl sm:text-5xl text-cyan-400">JI</div>
+            {/* Instructor Image */}
+            <div className="relative w-28 h-28 sm:w-40 sm:h-40 mb-6 rounded-2xl overflow-hidden ring-4 ring-cyan-500/30 bg-slate-800">
+              <Image
+                src="/images/joseph-ibrahim.jpg"
+                alt="Joseph Ibrahim"
+                width={160}
+                height={160}
+                className="w-full h-full object-cover"
+              />
             </div>
 
             {/* Instructor Name */}
