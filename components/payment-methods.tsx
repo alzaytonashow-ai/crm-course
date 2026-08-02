@@ -1,7 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { Copy, CreditCard, Smartphone, Wallet } from 'lucide-react'
+import { Copy, CreditCard, Smartphone } from 'lucide-react'
+import { SiApple, SiVisa, SiMastercard } from 'react-icons/si'
+import { GrWallet } from 'react-icons/gr'
 import { Button } from '@/components/ui/button'
 
 export default function PaymentMethods() {
@@ -87,34 +89,23 @@ export default function PaymentMethods() {
           </p>
           <div className="flex items-center justify-center gap-4 flex-wrap">
             {/* Apple Pay */}
-            <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-500 text-white">
-              <svg className="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M9 2c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2H9zm0 2h6v16H9V4z"/>
-              </svg>
-            </div>
-            
-            {/* Mastercard */}
-            <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-red-500 via-orange-500 to-red-600 text-white">
-              <svg className="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="currentColor">
-                <circle cx="9" cy="12" r="5" opacity="0.8"/>
-                <circle cx="15" cy="12" r="5" opacity="0.8"/>
-              </svg>
+            <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-black text-white shadow-md hover:shadow-lg transition-shadow">
+              <SiApple className="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
             
             {/* Visa */}
-            <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-blue-600 to-blue-700 text-white">
-              <svg className="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="currentColor">
-                <rect x="3" y="5" width="18" height="14" rx="2"/>
-                <text x="12" y="15" textAnchor="middle" fontSize="8" fontWeight="bold">VISA</text>
-              </svg>
+            <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-blue-600 to-blue-700 text-white shadow-md hover:shadow-lg transition-shadow">
+              <SiVisa className="w-6 h-6 sm:w-7 sm:h-7" />
+            </div>
+            
+            {/* Mastercard */}
+            <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-red-500 to-orange-500 text-white shadow-md hover:shadow-lg transition-shadow">
+              <SiMastercard className="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
             
             {/* Digital Wallet */}
-            <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-slate-600 to-slate-700 text-cyan-400">
-              <svg className="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M19 7V4H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm0 9h-4v4h-2v-4H9v-2h4v-4h2v4h4v2z" opacity="0.7"/>
-                <rect x="5" y="7" width="14" height="10" fill="none" stroke="currentColor" strokeWidth="2"/>
-              </svg>
+            <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 text-white shadow-md hover:shadow-lg transition-shadow">
+              <GrWallet className="w-6 h-6 sm:w-7 sm:h-7" />
             </div>
           </div>
         </div>
