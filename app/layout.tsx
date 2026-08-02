@@ -6,6 +6,7 @@ import './globals.css'
 const cairo = Cairo({ subsets: ['arabic', 'latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://crm-course.up.railway.app'),
   title: 'كورس إدارة علاقات العملاء CRM - تدريب احترافي في مصر',
   description: 'كورس عملي 100% لتطبيق أشهر أنظمة الـ CRM وبناء مسارات المبيعات وأتمتة خدمة العملاء. ورشة عمل حضورية في القاهرة بتدريب شامل من متخصصين.',
   icons: {
