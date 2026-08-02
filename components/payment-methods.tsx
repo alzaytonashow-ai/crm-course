@@ -80,28 +80,41 @@ export default function PaymentMethods() {
           </div>
         </div>
 
-        {/* Security Note with Payment Icons */}
+        {/* Security Note with Professional Payment Icons */}
         <div className="mt-6 text-center p-3 sm:p-4 bg-slate-900/50 rounded-lg border border-slate-700">
-          <p className="text-xs text-slate-400 mb-3">
+          <p className="text-xs text-slate-400 mb-4">
             ✓ <strong className="text-slate-300">آمان مضمون:</strong> جميع المدفوعات محمية وآمنة 100%
           </p>
-          <div className="flex items-center justify-center gap-3 flex-wrap">
-            <div className="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-800 border border-slate-600">
-              <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="currentColor" className="text-gray-300">
-                <path d="M19 8.5H5c-1.66 0-3 1.34-3 3v5c0 1.66 1.34 3 3 3h14c1.66 0 3-1.34 3-3v-5c0-1.66-1.34-3-3-3zm0 8h-14v-5h14v5z"/>
+          <div className="flex items-center justify-center gap-4 flex-wrap">
+            {/* Apple Pay */}
+            <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-cyan-400 to-blue-500 text-white">
+              <svg className="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 2c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2H9zm0 2h6v16H9V4z"/>
               </svg>
             </div>
-            <div className="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-800 border border-slate-600">
-              <CreditCard className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
-            </div>
-            <div className="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-800 border border-slate-600">
-              <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="currentColor" className="text-red-400">
-                <circle cx="8" cy="12" r="6"/>
-                <circle cx="16" cy="12" r="6"/>
+            
+            {/* Mastercard */}
+            <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-red-500 via-orange-500 to-red-600 text-white">
+              <svg className="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="9" cy="12" r="5" opacity="0.8"/>
+                <circle cx="15" cy="12" r="5" opacity="0.8"/>
               </svg>
             </div>
-            <div className="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-800 border border-slate-600">
-              <Wallet className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400" />
+            
+            {/* Visa */}
+            <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-blue-600 to-blue-700 text-white">
+              <svg className="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="currentColor">
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <text x="12" y="15" textAnchor="middle" fontSize="8" fontWeight="bold">VISA</text>
+              </svg>
+            </div>
+            
+            {/* Digital Wallet */}
+            <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-slate-600 to-slate-700 text-cyan-400">
+              <svg className="w-6 h-6 sm:w-7 sm:h-7" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 7V4H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm0 9h-4v4h-2v-4H9v-2h4v-4h2v4h4v2z" opacity="0.7"/>
+                <rect x="5" y="7" width="14" height="10" fill="none" stroke="currentColor" strokeWidth="2"/>
+              </svg>
             </div>
           </div>
         </div>
