@@ -37,10 +37,9 @@ export default function Header() {
           rel="noopener noreferrer"
           className="flex-shrink-0"
         >
-          <Button className="gap-1 sm:gap-1.5 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white text-xs sm:text-sm px-3 sm:px-4 py-2 h-auto">
-            <MessageCircle size={14} className="sm:size-16" />
-            <span className="hidden sm:inline">تواصل</span>
-            <span className="sm:hidden text-xs">اتصل</span>
+          <Button className="gap-1.5 border border-cyan-500/40 hover:border-cyan-500/70 hover:bg-cyan-500/10 bg-slate-900/50 text-cyan-300 hover:text-cyan-200 text-xs sm:text-sm px-3 sm:px-4 py-2 h-auto transition-all duration-300">
+            <MessageCircle size={16} />
+            <span className="hidden sm:inline">تواصل معنا</span>
           </Button>
         </a>
       </div>
