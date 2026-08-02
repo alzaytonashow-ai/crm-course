@@ -8,7 +8,6 @@ const cairo = Cairo({ subsets: ['arabic', 'latin'] })
 export const metadata: Metadata = {
   title: 'كورس إدارة علاقات العملاء CRM - تدريب احترافي في مصر',
   description: 'كورس عملي 100% لتطبيق أشهر أنظمة الـ CRM وبناء مسارات المبيعات وأتمتة خدمة العملاء. ورشة عمل حضورية في القاهرة بتدريب شامل من متخصصين.',
-  generator: 'v0.app',
   icons: {
     icon: '/favicon.ico',
     apple: '/og-image.png',
