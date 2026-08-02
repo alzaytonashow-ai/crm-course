@@ -11,8 +11,8 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-gradient-to-b from-slate-950 to-slate-900/95 backdrop-blur-md border-b border-slate-700/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between gap-4">
-        {/* Logo Section */}
-        <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+        {/* Logo and Instructor Badge Section */}
+        <div className="flex items-center gap-2 sm:gap-4 min-w-0 flex-1">
           <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg overflow-hidden bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center ring-2 ring-cyan-500/20">
             <Image
               src="/images/crm-logo.png"
@@ -22,11 +22,14 @@ export default function Header() {
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="hidden sm:block min-w-0">
-            <h1 className="font-bold text-base sm:text-lg text-white truncate">
-              كورس CRM
-            </h1>
-            <p className="text-xs text-slate-400 truncate">مع Joseph Ibrahim</p>
+          <div className="hidden lg:flex items-center gap-3 flex-1 min-w-0">
+            <Image
+              src="/images/joseph-badge.png"
+              alt="Joseph Ibrahim - CRM Specialist & AI Solutions"
+              width={280}
+              height={80}
+              className="h-16 w-auto object-contain"
+            />
           </div>
         </div>
 
