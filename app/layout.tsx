@@ -52,6 +52,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ar" dir="rtl" className="bg-background">
+      <head>
+        <meta name="vercel-toolbar" content="hide" />
+      </head>
       <body className={`${cairo.className} antialiased bg-background text-foreground`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
