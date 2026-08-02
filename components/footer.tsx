@@ -76,24 +76,24 @@ export default function Footer() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-secondary transition-colors"
+                className="flex items-center gap-2 text-sm hover:text-cyan-300 transition-colors group"
               >
-                <MessageCircle size={16} className="text-secondary" />
-                <span>+201552537557</span>
+                <MessageCircle size={18} className="text-green-400 group-hover:text-green-300 transition-colors" />
+                <span className="text-cyan-300">+201552537557</span>
               </a>
               <a
                 href="tel:+201552537557"
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                className="flex items-center gap-2 text-sm hover:text-cyan-300 transition-colors group"
               >
-                <Phone size={16} className="text-primary" />
-                <span>+201552537557</span>
+                <Phone size={18} className="text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                <span className="text-cyan-300">+201552537557</span>
               </a>
               <a
                 href="mailto:crm-course@aistudio-vision.com"
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-accent transition-colors"
+                className="flex items-center gap-2 text-sm hover:text-blue-300 transition-colors group"
               >
-                <Mail size={16} className="text-accent" />
-                <span>crm-course@aistudio-vision.com</span>
+                <Mail size={18} className="text-blue-400 group-hover:text-blue-300 transition-colors" />
+                <span className="text-blue-300">crm-course@aistudio-vision.com</span>
               </a>
             </div>
           </div>
