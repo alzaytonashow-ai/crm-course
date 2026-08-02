@@ -1,16 +1,44 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Copy, CreditCard, Smartphone } from 'lucide-react'
 import { SiApple, SiVisa, SiMastercard } from 'react-icons/si'
 import { MdAccountBalanceWallet } from 'react-icons/md'
 import { Button } from '@/components/ui/button'
 
+interface PaymentInfo {
+  instapay: { number: string; label: string; description: string }
+  paymentLink: string
+  amount: number
+  originalAmount: number
+  discount: number
+  currency: string
+  description: string
+}
+
 export default function PaymentMethods() {
   const [copiedInstapay, setCopiedInstapay] = useState(false)
+  const [paymentInfo, setPaymentInfo] = useState<PaymentInfo | null>(null)
+  const [loading, setLoading] = useState(true)
 
-  const instapayNumber = '01552537557'
-  const paymentLink = 'https://checkouts.kashier.io/en/paymentpage?ppLink=PP-1817925704,live'
+  useEffect(() => {
+    const fetchPaymentInfo = async () => {
+      try {
+        const response = await fetch('/api/payment-info')
+        const data = await response.json()
+        setPaymentInfo(data)
+      } catch (error) {
+        console.error('Failed to fetch payment info:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchPaymentInfo()
+  }, [])
+
+  const instapayNumber = paymentInfo?.instapay.number || ''
+  const paymentLink = paymentInfo?.paymentLink || ''
 
   const copyToClipboard = (text: string, setcopied: (value: boolean) => void) => {
     navigator.clipboard.writeText(text)

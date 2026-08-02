@@ -4,10 +4,33 @@ import { useState, useEffect } from 'react'
 import { ArrowLeft, Zap } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
+interface PaymentInfo {
+  instapay: { number: string }
+  paymentLink: string
+  amount: number
+  originalAmount: number
+  discount: number
+}
+
 export default function PricingSection() {
   const [timeLeft, setTimeLeft] = useState('00:00:00')
+  const [paymentInfo, setPaymentInfo] = useState<PaymentInfo | null>(null)
 
   useEffect(() => {
+    // Fetch payment info from API
+    const fetchPaymentInfo = async () => {
+      try {
+        const response = await fetch('/api/payment-info')
+        const data = await response.json()
+        setPaymentInfo(data)
+      } catch (error) {
+        console.error('Failed to fetch payment info:', error)
+      }
+    }
+
+    fetchPaymentInfo()
+
+    // Countdown timer
     const timer = setInterval(() => {
       const now = new Date()
       const endOfDay = new Date(now)
@@ -30,7 +53,7 @@ export default function PricingSection() {
     return () => clearInterval(timer)
   }, [])
 
-  const paymentLink = 'https://checkouts.kashier.io/en/paymentpage?ppLink=PP-1817925704,live'
+  const paymentLink = paymentInfo?.paymentLink || 'https://checkouts.kashier.io/en/paymentpage?ppLink=PP-1817925704,live'
 
   return (
     <section id="pricing-section" className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8">
@@ -59,16 +82,20 @@ export default function PricingSection() {
             {/* Pricing Display */}
             <div className="flex flex-col items-center mb-8">
               <div className="flex items-baseline gap-3 mb-3">
-                <span className="text-sm sm:text-base text-slate-400 line-through">3,500 جنيه</span>
+                <span className="text-sm sm:text-base text-slate-400 line-through">
+                  {paymentInfo?.originalAmount.toLocaleString('ar-EG')} جنيه
+                </span>
               </div>
               <div className="flex items-baseline gap-2 mb-4">
                 <span className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-                  2,500
+                  {paymentInfo?.amount.toLocaleString('ar-EG') || '2,500'}
                 </span>
                 <span className="text-lg sm:text-xl font-bold text-slate-300">جنيه</span>
               </div>
               <div className="px-3 sm:px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-400/30">
-                <p className="text-xs sm:text-sm font-semibold text-green-300">توفير 1,000 جنيه ✓</p>
+                <p className="text-xs sm:text-sm font-semibold text-green-300">
+                  توفير {paymentInfo?.discount.toLocaleString('ar-EG') || '1,000'} جنيه ✓
+                </p>
               </div>
             </div>
 
