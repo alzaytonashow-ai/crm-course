@@ -6,7 +6,7 @@ export default function KeyInfoBar() {
       icon: MapPin,
       title: 'المكان',
       value: 'القاهرة',
-      description: 'موقع متميز وسهل الوصول',
+      description: 'العباسية / مدينة نصر / مصر الجديدة',
     },
     {
       icon: Calendar,

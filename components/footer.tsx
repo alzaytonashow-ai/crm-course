@@ -1,4 +1,5 @@
 import { MessageCircle, Phone, Mail } from 'lucide-react'
+import Image from 'next/image'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -13,8 +14,14 @@ export default function Footer() {
           {/* About */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-9 h-9 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-xs">CRM</span>
+              <div className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Image
+                  src="/images/icon.png"
+                  alt="CRM Course Logo"
+                  width={36}
+                  height={36}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <h3 className="font-bold text-sm sm:text-base text-white">كورس CRM</h3>
             </div>
@@ -54,7 +61,7 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-foreground mb-4">معلومات الكورس</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>📍 <strong>المكان:</strong> القاهرة - مصر</li>
+              <li>📍 <strong>المكان:</strong> القاهرة - العباسية / مدينة نصر / مصر الجديدة</li>
               <li>⏱️ <strong>المدة:</strong> 18 ساعة عملي</li>
               <li>👥 <strong>العدد:</strong> 10 متدربين كحد أقصى</li>
               <li>📜 <strong>الشهادة:</strong> معتمدة</li>
@@ -69,22 +76,25 @@ export default function Footer() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-secondary transition-colors"
+                className="flex items-center gap-2 text-sm hover:text-cyan-300 transition-colors group"
               >
-                <MessageCircle size={16} className="text-secondary" />
-                <span>WhatsApp</span>
+                <MessageCircle size={18} className="text-green-400 group-hover:text-green-300 transition-colors" />
+                <span className="text-cyan-300">+201552537557</span>
               </a>
               <a
                 href="tel:+201552537557"
-                className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                className="flex items-center gap-2 text-sm hover:text-cyan-300 transition-colors group"
               >
-                <Phone size={16} className="text-primary" />
-                <span>+20 155 253 7557</span>
+                <Phone size={18} className="text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                <span className="text-cyan-300">+201552537557</span>
               </a>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Mail size={16} className="text-accent" />
-                <span>info@crm-academy.eg</span>
-              </div>
+              <a
+                href="mailto:crm-course@aistudio-vision.com"
+                className="flex items-center gap-2 text-sm hover:text-blue-300 transition-colors group"
+              >
+                <Mail size={18} className="text-blue-400 group-hover:text-blue-300 transition-colors" />
+                <span className="text-blue-300">crm-course@aistudio-vision.com</span>
+              </a>
             </div>
           </div>
         </div>

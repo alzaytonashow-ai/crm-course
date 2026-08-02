@@ -84,7 +84,7 @@ export default function PaymentMethods() {
               <p className="font-semibold text-slate-200 mb-2">الخطوات:</p>
               <p>• افتح تطبيق Instapay</p>
               <p>• تحويل أموال → الصق الرقم</p>
-              <p>• أدخل 1,000 جنيه وأرسل</p>
+              <p>• أدخل 1000 جنيه وأرسل</p>
             </div>
           </div>
         </div>
