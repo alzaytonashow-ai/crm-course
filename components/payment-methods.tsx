@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Copy, CreditCard, Smartphone } from 'lucide-react'
+import { Copy, CreditCard, Smartphone, Wallet } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export default function PaymentMethods() {
@@ -80,11 +80,30 @@ export default function PaymentMethods() {
           </div>
         </div>
 
-        {/* Security Note */}
+        {/* Security Note with Payment Icons */}
         <div className="mt-6 text-center p-3 sm:p-4 bg-slate-900/50 rounded-lg border border-slate-700">
-          <p className="text-xs text-slate-400">
+          <p className="text-xs text-slate-400 mb-3">
             ✓ <strong className="text-slate-300">آمان مضمون:</strong> جميع المدفوعات محمية وآمنة 100%
           </p>
+          <div className="flex items-center justify-center gap-3 flex-wrap">
+            <div className="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-800 border border-slate-600">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="currentColor" className="text-gray-300">
+                <path d="M19 8.5H5c-1.66 0-3 1.34-3 3v5c0 1.66 1.34 3 3 3h14c1.66 0 3-1.34 3-3v-5c0-1.66-1.34-3-3-3zm0 8h-14v-5h14v5z"/>
+              </svg>
+            </div>
+            <div className="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-800 border border-slate-600">
+              <CreditCard className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
+            </div>
+            <div className="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-800 border border-slate-600">
+              <svg className="w-4 h-4 sm:w-5 sm:h-5" viewBox="0 0 24 24" fill="currentColor" className="text-red-400">
+                <circle cx="8" cy="12" r="6"/>
+                <circle cx="16" cy="12" r="6"/>
+              </svg>
+            </div>
+            <div className="inline-flex items-center justify-center w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-800 border border-slate-600">
+              <Wallet className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400" />
+            </div>
+          </div>
         </div>
       </div>
     </section>
