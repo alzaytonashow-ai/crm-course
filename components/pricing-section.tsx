@@ -100,19 +100,12 @@ export default function PricingSection() {
             </div>
 
             {/* CTA Button */}
-            <a href={paymentLink} target="_blank" rel="noopener noreferrer" className="w-full block mb-4">
+            <a href={paymentLink} target="_blank" rel="noopener noreferrer" className="w-full block">
               <Button size="lg" className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-6 sm:py-3 text-base sm:text-lg gap-2">
                 احجز الآن - 2,500 جنيه فقط
                 <ArrowLeft size={20} />
               </Button>
             </a>
-
-            {/* Money Back Guarantee */}
-            <div className="text-center">
-              <p className="text-xs sm:text-sm text-slate-400">
-                ✓ <strong className="text-slate-300">ضمان الرضا:</strong> استرداد كامل المبلغ بدون أسئلة
-              </p>
-            </div>
           </div>
         </div>
 
