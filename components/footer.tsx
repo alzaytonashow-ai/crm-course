@@ -6,20 +6,20 @@ export default function Footer() {
   const whatsappLink = `https://wa.me/${whatsappNumber}`
 
   return (
-    <footer className="bg-card border-t border-border">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+    <footer className="bg-gradient-to-b from-slate-900 to-slate-950 border-t border-slate-700/50">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-6 mb-8 sm:mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-4 mb-8">
           {/* About */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">CRM</span>
+            <div className="flex items-center gap-2 mb-3">
+              <div className="w-9 h-9 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                <span className="text-white font-bold text-xs">CRM</span>
               </div>
-              <h3 className="font-bold text-lg text-foreground">أكاديمية CRM</h3>
+              <h3 className="font-bold text-sm sm:text-base text-white">كورس CRM</h3>
             </div>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              تدريب احترافي وعملي في أنظمة إدارة علاقات العملاء لتحقيق نتائج حقيقية وزيادة المبيعات.
+            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+              تدريب عملي احترافي في أنظمة إدارة العملاء لتحقيق نتائج فعلية وزيادة المبيعات.
             </p>
           </div>
 

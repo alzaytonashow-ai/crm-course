@@ -33,101 +33,102 @@ export default function PricingSection() {
   const paymentLink = 'https://checkouts.kashier.io/en/paymentpage?ppLink=PP-1817925704,live'
 
   return (
-    <section id="pricing-section" className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-muted to-background">
-      <div className="max-w-4xl mx-auto">
+    <section id="pricing-section" className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-3xl mx-auto">
         {/* Urgency Badge */}
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/15 border border-accent/30 animate-pulse">
-            <Zap size={16} className="text-accent" />
-            <span className="text-sm font-bold text-accent">عرض حصري لأول 20 متدرب فقط!</span>
+        <div className="flex justify-center mb-8">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-400/30 animate-pulse">
+            <Zap size={14} className="text-orange-400" />
+            <span className="text-xs sm:text-sm font-bold text-orange-300">عرض حصري - أول 20 متدرب فقط!</span>
           </div>
         </div>
 
         {/* Main Pricing Card */}
-        <div className="bg-gradient-to-br from-card via-card to-primary/5 rounded-2xl sm:rounded-3xl p-8 sm:p-12 border-2 border-primary/30 shadow-2xl relative overflow-hidden">
+        <div className="bg-gradient-to-br from-slate-800 via-slate-900 to-slate-900/50 rounded-lg sm:rounded-2xl p-6 sm:p-10 border-2 border-cyan-500/30 shadow-2xl relative overflow-hidden">
           {/* Corner decoration */}
-          <div className="absolute -top-20 -right-20 w-40 h-40 bg-primary/10 rounded-full blur-3xl" />
-          <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-secondary/10 rounded-full blur-3xl" />
+          <div className="absolute -top-16 -right-16 w-32 h-32 bg-cyan-500/10 rounded-full blur-3xl" />
+          <div className="absolute -bottom-16 -left-16 w-32 h-32 bg-blue-500/10 rounded-full blur-3xl" />
 
           <div className="relative z-10">
             {/* Header */}
-            <div className="text-center mb-8 sm:mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">عرض خاص - احجز الآن!</h2>
-              <p className="text-base sm:text-lg text-muted-foreground">السعر ينتهي قريباً - تأمين مقعدك اليوم</p>
+            <div className="text-center mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">عرض خاص - احجز اليوم!</h2>
+              <p className="text-xs sm:text-sm text-slate-300">السعر يتغير قريباً - ضمّن مقعدك الآن</p>
             </div>
 
             {/* Pricing Display */}
-            <div className="flex flex-col items-center mb-8 sm:mb-12">
-              <div className="flex items-baseline gap-3 mb-4">
-                <span className="text-base text-muted-foreground line-through">3,500 جنيه</span>
+            <div className="flex flex-col items-center mb-8">
+              <div className="flex items-baseline gap-3 mb-3">
+                <span className="text-sm sm:text-base text-slate-400 line-through">3,500 جنيه</span>
               </div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-5xl sm:text-6xl font-bold text-transparent bg-gradient-to-r from-primary to-accent bg-clip-text">
+              <div className="flex items-baseline gap-2 mb-4">
+                <span className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
                   2,500
                 </span>
-                <span className="text-2xl font-bold text-muted-foreground">جنيه فقط</span>
+                <span className="text-lg sm:text-xl font-bold text-slate-300">جنيه</span>
               </div>
-              <div className="mt-4 px-4 py-2 rounded-full bg-accent/20 border border-accent/40">
-                <p className="text-sm font-semibold text-accent">توفير 1,000 جنيه 📉</p>
+              <div className="px-3 sm:px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-400/30">
+                <p className="text-xs sm:text-sm font-semibold text-green-300">توفير 1,000 جنيه ✓</p>
               </div>
             </div>
 
             {/* Booking Terms */}
-            <div className="bg-secondary/10 border-l-4 border-secondary rounded-lg p-6 mb-8 sm:mb-12">
-              <h3 className="font-bold text-foreground mb-3 flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center text-white text-xs font-bold">✓</span>
-                شروط الحجز
+            <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-r-4 border-cyan-400 rounded-lg p-4 sm:p-6 mb-8">
+              <h3 className="font-bold text-white mb-3 flex items-center gap-2">
+                <span className="w-6 h-6 rounded-full bg-cyan-500 flex items-center justify-center text-slate-900 text-xs font-bold">✓</span>
+                شروط الدفع
               </h3>
-              <ul className="space-y-2 text-sm sm:text-base">
-                <li className="text-muted-foreground">
-                  <strong className="text-foreground">1,000 جنيه عربون جدية</strong> - لتأكيد حجزك الآن
+              <ul className="space-y-2 text-xs sm:text-sm text-slate-300">
+                <li>
+                  <strong className="text-cyan-300">1,000 جنيه</strong> - عربون تأكيد الحجز
                 </li>
-                <li className="text-muted-foreground">
-                  <strong className="text-foreground">الباقي 1,500 جنيه</strong> - عند حضور أول محاضرة
+                <li>
+                  <strong className="text-cyan-300">1,500 جنيه</strong> - عند الحضور
                 </li>
-                <li className="text-muted-foreground">سهل الدفع - دعم طرق دفع محلية وأونلاين</li>
+                <li>طرق دفع متعددة - محلية وأونلاين آمنة</li>
               </ul>
             </div>
 
             {/* Countdown Timer */}
-            <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-lg p-6 mb-8 sm:mb-12 border border-primary/20">
-              <p className="text-sm text-muted-foreground text-center mb-2">العرض ينتهي في:</p>
+            <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-lg p-4 sm:p-6 mb-8 border border-orange-400/20">
+              <p className="text-xs sm:text-sm text-slate-300 text-center mb-3">العرض ينتهي في:</p>
               <div className="text-center">
-                <p className="text-3xl sm:text-4xl font-bold text-transparent bg-gradient-to-r from-primary to-accent bg-clip-text font-mono">
+                <p className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400 font-mono">
                   {timeLeft}
                 </p>
               </div>
             </div>
 
             {/* CTA Button */}
-            <a href={paymentLink} target="_blank" rel="noopener noreferrer" className="w-full">
-              <Button size="lg" className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white text-lg font-bold h-14 sm:h-16 gap-2">
-                احجز مقعدك الآن - 2,500 جنيه فقط <ArrowLeft size={24} />
+            <a href={paymentLink} target="_blank" rel="noopener noreferrer" className="w-full block mb-4">
+              <Button size="lg" className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-6 sm:py-3 text-base sm:text-lg gap-2">
+                احجز الآن - 2,500 جنيه فقط
+                <ArrowLeft size={20} />
               </Button>
             </a>
 
             {/* Money Back Guarantee */}
-            <div className="mt-6 text-center">
-              <p className="text-xs sm:text-sm text-muted-foreground">
-                🛡️ <strong>ضمان الرضا:</strong> إذا لم تكن مرتاحاً، استرداد كامل المبلغ بدون أسئلة
+            <div className="text-center">
+              <p className="text-xs sm:text-sm text-slate-400">
+                ✓ <strong className="text-slate-300">ضمان الرضا:</strong> استرداد كامل المبلغ بدون أسئلة
               </p>
             </div>
           </div>
         </div>
 
         {/* Benefits Grid */}
-        <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-          <div className="text-center p-4 sm:p-6 rounded-lg bg-card border border-border">
-            <p className="text-2xl font-bold text-primary mb-1">18 ساعة</p>
-            <p className="text-xs sm:text-sm text-muted-foreground">تطبيق عملي مركز</p>
+        <div className="mt-10 sm:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+          <div className="text-center p-4 rounded-lg bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50">
+            <p className="text-xl sm:text-2xl font-bold text-cyan-400 mb-1">18 ساعة</p>
+            <p className="text-xs text-slate-400">تطبيق عملي</p>
           </div>
-          <div className="text-center p-4 sm:p-6 rounded-lg bg-card border border-border">
-            <p className="text-2xl font-bold text-secondary mb-1">شهادة معتمدة</p>
-            <p className="text-xs sm:text-sm text-muted-foreground">معترف بها</p>
+          <div className="text-center p-4 rounded-lg bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50">
+            <p className="text-xl sm:text-2xl font-bold text-cyan-400 mb-1">معتمدة</p>
+            <p className="text-xs text-slate-400">من Vision AI</p>
           </div>
-          <div className="text-center p-4 sm:p-6 rounded-lg bg-card border border-border">
-            <p className="text-2xl font-bold text-accent mb-1">دعم دائم</p>
-            <p className="text-xs sm:text-sm text-muted-foreground">بعد انتهاء الكورس</p>
+          <div className="text-center p-4 rounded-lg bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50">
+            <p className="text-xl sm:text-2xl font-bold text-cyan-400 mb-1">دعم دائم</p>
+            <p className="text-xs text-slate-400">ما بعد الكورس</p>
           </div>
         </div>
       </div>

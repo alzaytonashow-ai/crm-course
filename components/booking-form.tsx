@@ -67,33 +67,33 @@ export default function BookingForm() {
   const isFormValid = formData.fullName && formData.phone
 
   return (
-    <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-muted">
-      <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">تأكيد حجزك</h2>
-          <p className="text-lg text-muted-foreground">
-            ملء البيانات التالية لتأكيد حجزك وتسجيلك في الكورس
+    <section className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-2xl mx-auto">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">تأكيد حجزك</h2>
+          <p className="text-xs sm:text-sm text-slate-300">
+            أكمل بيانات التسجيل وسنتواصل معك قريباً
           </p>
         </div>
 
         {submitted ? (
-          <div className="bg-gradient-to-br from-accent/20 to-primary/20 rounded-xl p-8 sm:p-12 border-2 border-accent/40 text-center">
-            <div className="w-16 h-16 rounded-full bg-accent/30 flex items-center justify-center mx-auto mb-4">
-              <span className="text-3xl">✓</span>
+          <div className="bg-gradient-to-br from-cyan-500/10 to-green-500/10 rounded-lg sm:rounded-xl p-6 sm:p-8 border-2 border-cyan-500/30 text-center">
+            <div className="w-14 h-14 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-4">
+              <span className="text-2xl">✓</span>
             </div>
-            <h3 className="text-2xl font-bold text-accent mb-2">شكراً لك!</h3>
-            <p className="text-muted-foreground mb-4">
-              تم استقبال بيانات حجزك. سنتواصل معك عبر WhatsApp قريباً لتأكيد التفاصيل.
+            <h3 className="text-lg sm:text-xl font-bold text-cyan-300 mb-2">شكراً لك!</h3>
+            <p className="text-xs sm:text-sm text-slate-300 mb-2">
+              تم استقبال بيانات حجزك. سنتواصل معك عبر WhatsApp قريباً.
             </p>
-            <p className="text-sm text-muted-foreground">سيتم إعادة تحميل النموذج الآن...</p>
+            <p className="text-xs text-slate-400">سيتم تحديث النموذج...</p>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="bg-card rounded-2xl p-6 sm:p-10 border-2 border-border shadow-lg">
-            <div className="space-y-6">
+          <form onSubmit={handleSubmit} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-lg sm:rounded-xl p-5 sm:p-8 border border-slate-700/50">
+            <div className="space-y-5">
               {/* Full Name */}
               <div>
-                <label htmlFor="fullName" className="block text-sm font-semibold text-foreground mb-2">
-                  الاسم الكامل <span className="text-accent">*</span>
+                <label htmlFor="fullName" className="block text-xs sm:text-sm font-semibold text-white mb-2">
+                  الاسم الكامل <span className="text-red-400">*</span>
                 </label>
                 <input
                   type="text"
@@ -102,15 +102,15 @@ export default function BookingForm() {
                   value={formData.fullName}
                   onChange={handleInputChange}
                   placeholder="أدخل اسمك الكامل"
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-muted/50 text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-slate-600 bg-slate-900/50 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all text-sm"
                   required
                 />
               </div>
 
               {/* Phone */}
               <div>
-                <label htmlFor="phone" className="block text-sm font-semibold text-foreground mb-2">
-                  رقم الهاتف / WhatsApp <span className="text-accent">*</span>
+                <label htmlFor="phone" className="block text-xs sm:text-sm font-semibold text-white mb-2">
+                  رقم الهاتف / WhatsApp <span className="text-red-400">*</span>
                 </label>
                 <input
                   type="tel"
@@ -119,15 +119,15 @@ export default function BookingForm() {
                   value={formData.phone}
                   onChange={handleInputChange}
                   placeholder="01xxxxxxxxx"
-                  className="w-full px-4 py-3 rounded-lg border border-border bg-muted/50 text-foreground placeholder-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-slate-600 bg-slate-900/50 text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all text-sm"
                   required
                 />
               </div>
 
               {/* File Upload */}
               <div>
-                <label htmlFor="proofFile" className="block text-sm font-semibold text-foreground mb-2">
-                  إرسال إثبات التحويل (اختياري)
+                <label htmlFor="proofFile" className="block text-xs sm:text-sm font-semibold text-white mb-2">
+                  إثبات التحويل (اختياري)
                 </label>
                 <div className="relative">
                   <input
@@ -140,23 +140,23 @@ export default function BookingForm() {
                   />
                   <label
                     htmlFor="proofFile"
-                    className="flex items-center justify-center w-full px-4 py-8 rounded-lg border-2 border-dashed border-border bg-muted/30 hover:bg-muted/50 cursor-pointer transition-colors"
+                    className="flex items-center justify-center w-full px-4 py-6 sm:py-8 rounded-lg border-2 border-dashed border-slate-600 bg-slate-900/30 hover:bg-slate-900/50 cursor-pointer transition-colors"
                   >
                     <div className="text-center">
-                      <Upload className="mx-auto mb-2 text-primary" size={32} />
-                      <p className="text-sm font-semibold text-foreground">
-                        {formData.proofFile ? formData.proofFile.name : 'انقر لرفع صورة أو ملف PDF'}
+                      <Upload className="mx-auto mb-2 text-cyan-400" size={24} />
+                      <p className="text-xs sm:text-sm font-semibold text-white">
+                        {formData.proofFile ? formData.proofFile.name : 'اضغط لرفع صورة'}
                       </p>
-                      <p className="text-xs text-muted-foreground mt-1">صورة الشاشة أو إيصال التحويل</p>
+                      <p className="text-xs text-slate-400 mt-1">صورة أو PDF</p>
                     </div>
                   </label>
                 </div>
               </div>
 
               {/* Terms Agreement */}
-              <div className="bg-muted/50 rounded-lg p-4 border border-border">
-                <p className="text-xs sm:text-sm text-muted-foreground">
-                  بالضغط على "تأكيد وإرسال"، أنت توافق على استقبال اتصالات متابعة عبر WhatsApp بخصوص حجزك والكورس.
+              <div className="bg-slate-900/50 rounded-lg p-3 sm:p-4 border border-slate-700">
+                <p className="text-xs text-slate-400">
+                  بالحجز أنت توافق على تلقي تحديثات حول الكورس عبر WhatsApp
                 </p>
               </div>
 
@@ -164,7 +164,7 @@ export default function BookingForm() {
               <Button
                 type="submit"
                 disabled={!isFormValid || loading}
-                className="w-full bg-gradient-to-r from-primary to-secondary hover:from-primary/90 hover:to-secondary/90 text-white font-bold text-base h-12 gap-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold text-sm sm:text-base py-3 gap-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
               >
                 {loading ? (
                   <>
@@ -173,8 +173,8 @@ export default function BookingForm() {
                   </>
                 ) : (
                   <>
-                    <Send size={18} />
-                    تأكيد وإرسال بيانات الحجز
+                    <Send size={16} />
+                    تأكيد بيانات الحجز
                   </>
                 )}
               </Button>
@@ -183,15 +183,15 @@ export default function BookingForm() {
         )}
 
         {/* Contact Alternative */}
-        <div className="mt-8 text-center p-6 bg-card rounded-lg border border-border">
-          <p className="text-sm text-muted-foreground mb-3">تفضل التواصل المباشر؟</p>
+        <div className="mt-6 text-center p-4 sm:p-6 bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-lg border border-slate-700">
+          <p className="text-xs sm:text-sm text-slate-300 mb-3">تفضل التواصل المباشر؟</p>
           <a
-            href="https://wa.me/201552537557?text=مرحباً، أود الاستفسار عن كورس إدارة علاقات العملاء CRM"
+            href="https://wa.me/201552537557?text=مرحباً، أود الاستفسار عن كورس CRM مع Joseph Ibrahim"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button className="gap-2 bg-secondary hover:bg-secondary/90 text-white font-semibold">
-              تواصل معنا عبر WhatsApp الآن
+            <Button className="w-full gap-2 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold text-xs sm:text-sm">
+              اتصل بنا عبر WhatsApp
             </Button>
           </a>
         </div>

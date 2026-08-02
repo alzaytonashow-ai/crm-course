@@ -35,53 +35,53 @@ export default function WhatYouLearn() {
   ]
 
   return (
-    <section className="py-16 sm:py-20 px-4 sm:px-6 lg:px-8 bg-background">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12 sm:mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">ماذا ستتعلم؟</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            برنامج شامل يغطي كل جوانب إدارة العملاء الاحترافية والعملية
+    <section className="py-10 sm:py-14 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3">ماذا ستتعلم؟</h2>
+          <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto">
+            برنامج شامل وعملي يغطي كل جوانب إدارة العملاء بكفاءة واحترافية
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {learningItems.map((item, index) => {
             const Icon = item.icon
             return (
               <div
                 key={index}
-                className="group bg-card rounded-xl p-6 sm:p-8 border border-border hover:border-primary/50 hover:shadow-lg transition-all duration-300"
+                className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 rounded-lg sm:rounded-xl p-5 sm:p-6 border border-slate-700/50 hover:border-cyan-500/50 hover:from-slate-800 transition-all duration-300"
               >
-                <div className="w-14 h-14 rounded-lg bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center mb-4 group-hover:from-primary/30 group-hover:to-secondary/30 transition-colors">
-                  <Icon size={28} className="text-primary" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center mb-3 sm:mb-4 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-colors">
+                  <Icon size={24} className="text-cyan-400" />
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3">{item.title}</h3>
-                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{item.description}</p>
+                <h3 className="text-base sm:text-lg font-bold text-white mb-2">{item.title}</h3>
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">{item.description}</p>
               </div>
             )
           })}
         </div>
 
         {/* Bonus Section */}
-        <div className="mt-12 sm:mt-16 bg-gradient-to-r from-accent/10 via-primary/5 to-secondary/10 rounded-2xl p-8 sm:p-12 border border-accent/20">
+        <div className="mt-10 sm:mt-14 bg-gradient-to-r from-cyan-500/10 via-blue-500/5 to-purple-500/10 rounded-lg sm:rounded-2xl p-6 sm:p-8 border border-cyan-500/20">
           <div className="text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/20 border border-accent/40 mb-4">
-              <Zap size={16} className="text-accent" />
-              <span className="text-sm font-semibold text-accent">مكافآت إضافية</span>
+            <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-400/30 mb-4">
+              <Zap size={16} className="text-cyan-400" />
+              <span className="text-xs sm:text-sm font-semibold text-cyan-300">مكافآت إضافية</span>
             </div>
-            <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-4">ستحصل على</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
-              <div className="text-center">
-                <p className="text-lg font-bold text-primary mb-1">نماذج وقوالب</p>
-                <p className="text-sm text-muted-foreground">جاهزة للاستخدام مباشرة</p>
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6">بالإضافة ستحصل على:</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+              <div className="bg-slate-900/50 rounded-lg p-4 border border-slate-700/50">
+                <p className="text-sm sm:text-base font-bold text-cyan-400 mb-1">نماذج جاهزة</p>
+                <p className="text-xs text-slate-400">للاستخدام الفوري</p>
               </div>
-              <div className="text-center">
-                <p className="text-lg font-bold text-secondary mb-1">مجموعة دعم</p>
-                <p className="text-sm text-muted-foreground">للمتابعة بعد انتهاء الكورس</p>
+              <div className="bg-slate-900/50 rounded-lg p-4 border border-slate-700/50">
+                <p className="text-sm sm:text-base font-bold text-cyan-400 mb-1">مجموعة دعم</p>
+                <p className="text-xs text-slate-400">متابعة بعد الكورس</p>
               </div>
-              <div className="text-center">
-                <p className="text-lg font-bold text-accent mb-1">فيديوهات تسجيل</p>
-                <p className="text-sm text-muted-foreground">للمراجعة في أي وقت</p>
+              <div className="bg-slate-900/50 rounded-lg p-4 border border-slate-700/50">
+                <p className="text-sm sm:text-base font-bold text-cyan-400 mb-1">فيديوهات تسجيل</p>
+                <p className="text-xs text-slate-400">للمراجعة أي وقت</p>
               </div>
             </div>
           </div>
